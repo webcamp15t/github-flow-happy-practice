@@ -72,7 +72,7 @@ button {
       inset 4px 4px 6px 0 rgba(116, 125, 136, 0.3);
     transition: all 0.3s ease;
   }
-    /* 5 */
+  /* 5 */
   &--5 {
     width: 130px;
     height: 40px;
@@ -113,7 +113,7 @@ button {
     left: 0;
     bottom: 0;
   }
-  
+
   &--5:hover::before,
   &--5:hover::after {
     width: 100%;
@@ -123,81 +123,115 @@ button {
   /*6*/
 
   &--6 {
-    background: rgb(247,150,192);
-background: radial-gradient(circle, rgba(247,150,192,1) 0%, rgba(118,174,241,1) 100%);
+    background: rgb(247, 150, 192);
+    background: radial-gradient(
+      circle,
+      rgba(247, 150, 192, 1) 0%,
+      rgba(118, 174, 241, 1) 100%
+    );
     line-height: 42px;
     padding: 0;
     border: none;
-}
-&--6 span {
+  }
+  &--6 span {
     position: relative;
     display: block;
     width: 100%;
     height: 100%;
-}
-&--6:before,
-&--6:after {
+  }
+  &--6:before,
+  &--6:after {
     position: absolute;
     content: "";
     height: 0%;
     width: 1px;
-box-shadow:
-    -1px -1px 20px 0px rgba(255,255,255,1),
-    -4px -4px 5px 0px rgba(255,255,255,1),
-    7px 7px 20px 0px rgba(0,0,0,.4),
-    4px 4px 5px 0px rgba(0,0,0,.3);
-}
-&--6:before {
+    box-shadow: -1px -1px 20px 0px rgba(255, 255, 255, 1),
+      -4px -4px 5px 0px rgba(255, 255, 255, 1),
+      7px 7px 20px 0px rgba(0, 0, 0, 0.4), 4px 4px 5px 0px rgba(0, 0, 0, 0.3);
+  }
+  &--6:before {
     right: 0;
     top: 0;
     transition: all 500ms ease;
-}
-&--6:after {
+  }
+  &--6:after {
     left: 0;
     bottom: 0;
     transition: all 500ms ease;
-}
-&--6:hover{
+  }
+  &--6:hover {
     background: transparent;
     color: #76aef1;
     box-shadow: none;
-}
-&--6:hover:before {
+  }
+  &--6:hover:before {
     transition: all 500ms ease;
     height: 100%;
-}
-&--6:hover:after {
+  }
+  &--6:hover:after {
     transition: all 500ms ease;
     height: 100%;
-}
-&--6 span:before,
-&--6 span:after {
+  }
+  &--6 span:before,
+  &--6 span:after {
     position: absolute;
     content: "";
-    box-shadow:
-    -1px -1px 20px 0px rgba(255,255,255,1),
-    -4px -4px 5px 0px rgba(255,255,255,1),
-    7px 7px 20px 0px rgba(0,0,0,.4),
-    4px 4px 5px 0px rgba(0,0,0,.3);
-}
-&--6 span:before {
+    box-shadow: -1px -1px 20px 0px rgba(255, 255, 255, 1),
+      -4px -4px 5px 0px rgba(255, 255, 255, 1),
+      7px 7px 20px 0px rgba(0, 0, 0, 0.4), 4px 4px 5px 0px rgba(0, 0, 0, 0.3);
+  }
+  &--6 span:before {
     left: 0;
     top: 0;
     width: 0%;
-    height: .5px;
+    height: 0.5px;
     transition: all 500ms ease;
-}
-&--6 span:after {
+  }
+  &--6 span:after {
     right: 0;
     bottom: 0;
     width: 0%;
-    height: .5px;
+    height: 0.5px;
     transition: all 500ms ease;
-}
-&--6 span:hover:before {
+  }
+  &--6 span:hover:before {
     width: 100%;
-}
-&--6 span:hover:after {
+  }
+  &--6 span:hover:after {
     width: 100%;
-}
+  }
+  /* 9 */
+  &--9 {
+    border: none;
+    transition: all 0.3s ease;
+    overflow: hidden;
+  }
+  &--9:after {
+    position: absolute;
+    content: " ";
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1fd1f9;
+    background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
+    transition: all 0.3s ease;
+  }
+  &--9:hover {
+    background: transparent;
+    box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.5),
+      -4px -4px 6px 0 rgba(116, 125, 136, 0.2),
+      inset -4px -4px 6px 0 rgba(255, 255, 255, 0.5),
+      inset 4px 4px 6px 0 rgba(116, 125, 136, 0.3);
+    color: #fff;
+  }
+  &--9:hover:after {
+    -webkit-transform: scale(2) rotate(180deg);
+    transform: scale(2) rotate(180deg);
+    box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.5),
+      -4px -4px 6px 0 rgba(116, 125, 136, 0.2),
+      inset -4px -4px 6px 0 rgba(255, 255, 255, 0.5),
+      inset 4px 4px 6px 0 rgba(116, 125, 136, 0.3);
+  }
 }
