@@ -42,14 +42,38 @@ button {
       inset 4px 4px 6px 0 rgba(0, 0, 0, 0.4);
   }
 
-  /* 4 */
-  &--4 {
-    background-color: #4dccc6;
-    background-image: linear-gradient(315deg, #4dccc6 0%, #96e4df 74%);
+  /* 3 */
+  &--3 {
+    background: rgb(0, 172, 238);
+    background: linear-gradient(
+      0deg,
+      rgba(0, 172, 238, 1) 0%,
+      rgba(2, 126, 251, 1) 100%
+    );
+    width: 130px;
+    height: 40px;
     line-height: 42px;
     padding: 0;
     border: none;
   }
+
+  /* 4 */
+  &--4 {
+    background-color: #4dccc6;
+    background-image: linear-gradient(315deg, #4dccc6 0%, #96e4df 74%);
+
+    line-height: 42px;
+    padding: 0;
+    border: none;
+  }
+
+  &--3 span {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
   &--4:hover {
     background-color: #89d8d3;
     background-image: linear-gradient(315deg, #89d8d3 0%, #03c8a8 74%);
@@ -60,6 +84,61 @@ button {
     width: 100%;
     height: 100%;
   }
+
+  &--3:before,
+  &--3:after {
+    position: absolute;
+    content: "";
+    right: 0;
+    top: 0;
+    background: rgba(2, 126, 251, 1);
+    transition: all 0.3s ease;
+  }
+  &--3:before {
+    height: 0%;
+    width: 2px;
+  }
+  &--3:after {
+    width: 0%;
+    height: 2px;
+  }
+  &--3:hover {
+    background: transparent;
+    box-shadow: none;
+  }
+  &--3:hover:before {
+    height: 100%;
+  }
+  &--3:hover:after {
+    width: 100%;
+  }
+  &--3 span:hover {
+    color: rgba(2, 126, 251, 1);
+  }
+  &--3 span:before,
+  &--3 span:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    background: rgba(2, 126, 251, 1);
+    transition: all 0.3s ease;
+  }
+  &--3 span:before {
+    width: 2px;
+    height: 0%;
+  }
+  &--3 span:after {
+    width: 0%;
+    height: 2px;
+  }
+  &--3 span:hover:before {
+    height: 100%;
+  }
+  &--3 span:hover:after {
+    width: 100%;
+  }
+
   &--4:before,
   &--4:after {
     position: absolute;
@@ -200,6 +279,166 @@ button {
   &--6 span:hover:after {
     width: 100%;
   }
+
+  /* 7 */
+  &--7 {
+    background: linear-gradient(
+      0deg,
+      rgba(255, 151, 0, 1) 0%,
+      rgba(251, 75, 2, 1) 100%
+    );
+    line-height: 42px;
+    padding: 0;
+    border: none;
+  }
+  &--7 span {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  &--7:before,
+  &--7:after {
+    position: absolute;
+    content: "";
+    right: 0;
+    bottom: 0;
+    background: rgba(251, 75, 2, 1);
+    box-shadow: -7px -7px 20px 0px rgba(255, 255, 255, 0.9),
+      -4px -4px 5px 0px rgba(255, 255, 255, 0.9),
+      7px 7px 20px 0px rgba(0, 0, 0, 0.2), 4px 4px 5px 0px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+  }
+  &--7:before {
+    height: 0%;
+    width: 2px;
+  }
+  &--7:after {
+    width: 0%;
+    height: 2px;
+  }
+  &--7:hover {
+    color: rgba(251, 75, 2, 1);
+    background: transparent;
+  }
+  &--7:hover:before {
+    height: 100%;
+  }
+  &--7:hover:after {
+    width: 100%;
+  }
+  &--7 span:before,
+  &--7 span:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    background: rgba(251, 75, 2, 1);
+    box-shadow: -7px -7px 20px 0px rgba(255, 255, 255, 0.9),
+      -4px -4px 5px 0px rgba(255, 255, 255, 0.9),
+      7px 7px 20px 0px rgba(0, 0, 0, 0.2), 4px 4px 5px 0px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+  }
+  &--7 span:before {
+    width: 2px;
+    height: 0%;
+  }
+  &--7 span:after {
+    height: 2px;
+    width: 0%;
+  }
+  &--7 span:hover:before {
+    height: 100%;
+  }
+  &--7 span:hover:after {
+    width: 100%;
+  }
+  /* 8 */
+  @mixin custom-btn--8-span {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    background: #c797eb;
+    transition: all 0.3s ease;
+  }
+
+  @mixin custom-btn--8 {
+    position: absolute;
+    content: "";
+    right: 0;
+    bottom: 0;
+    background: #c797eb;
+    /*box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
+              -4px -4px 6px 0 rgba(116, 125, 136, .2),
+    inset -4px -4px 6px 0 rgba(255,255,255,.5),
+    inset 4px 4px 6px 0 rgba(116, 125, 136, .3);*/
+    transition: all 0.3s ease;
+  }
+
+  &--8 {
+    background-color: #f0ecfc;
+    background-image: linear-gradient(315deg, #f0ecfc 0%, #c797eb 74%);
+    line-height: 42px;
+    padding: 0;
+    border: none;
+
+    &::before {
+      height: 0%;
+      width: 2px;
+      @include custom-btn--8;
+    }
+
+    &::after {
+      width: 0%;
+      height: 2px;
+      @include custom-btn--8;
+    }
+
+    &:hover {
+      background: transparent;
+
+      &::before {
+        height: 100%;
+      }
+
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+
+  &--8 span {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    &::before {
+      width: 2px;
+      height: 0%;
+      @include custom-btn--8-span;
+    }
+
+    &::after {
+      height: 2px;
+      width: 0%;
+      @include custom-btn--8-span;
+    }
+
+    &:hover {
+      color: #c797eb;
+
+      &::before {
+        height: 100%;
+      }
+
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+
   /* 9 */
   &--9 {
     border: none;
