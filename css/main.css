@@ -18,6 +18,7 @@ button {
   box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), 7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
   outline: none;
   /* 2 */
+  /* 3 */
 }
 .custom-btn--2 {
   background: rgb(96, 9, 240);
@@ -30,6 +31,72 @@ button {
 }
 .custom-btn--2:hover {
   box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.5), -4px -4px 6px 0 rgba(116, 125, 136, 0.5), inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2), inset 4px 4px 6px 0 rgba(0, 0, 0, 0.4);
+}
+.custom-btn--3 {
+  background: rgb(0, 172, 238);
+  background: linear-gradient(0deg, rgb(0, 172, 238) 0%, rgb(2, 126, 251) 100%);
+  width: 130px;
+  height: 40px;
+  line-height: 42px;
+  padding: 0;
+  border: none;
+}
+.custom-btn--3 span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.custom-btn--3:before, .custom-btn--3:after {
+  position: absolute;
+  content: "";
+  right: 0;
+  top: 0;
+  background: rgb(2, 126, 251);
+  transition: all 0.3s ease;
+}
+.custom-btn--3:before {
+  height: 0%;
+  width: 2px;
+}
+.custom-btn--3:after {
+  width: 0%;
+  height: 2px;
+}
+.custom-btn--3:hover {
+  background: transparent;
+  box-shadow: none;
+}
+.custom-btn--3:hover:before {
+  height: 100%;
+}
+.custom-btn--3:hover:after {
+  width: 100%;
+}
+.custom-btn--3 span:hover {
+  color: rgb(2, 126, 251);
+}
+.custom-btn--3 span:before, .custom-btn--3 span:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  background: rgb(2, 126, 251);
+  transition: all 0.3s ease;
+}
+.custom-btn--3 span:before {
+  width: 2px;
+  height: 0%;
+}
+.custom-btn--3 span:after {
+  width: 0%;
+  height: 2px;
+}
+.custom-btn--3 span:hover:before {
+  height: 100%;
+}
+.custom-btn--3 span:hover:after {
+  width: 100%;
 }
 
 body {
