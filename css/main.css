@@ -23,7 +23,7 @@ button {
 }
 .custom-btn--2 {
   background: rgb(96, 9, 240);
-  background: linear-gradient(0deg, rgb(91, 205, 76) 0%, rgb(129, 5, 240) 100%);
+  background: linear-gradient(0deg, rgb(96, 9, 240) 0%, rgb(129, 5, 240) 100%);
   border: none;
 }
 .custom-btn--2::before {
