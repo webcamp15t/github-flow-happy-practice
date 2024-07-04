@@ -42,14 +42,38 @@ button {
       inset 4px 4px 6px 0 rgba(0, 0, 0, 0.4);
   }
 
-  /* 4 */
-  &--4 {
-    background-color: #4dccc6;
-    background-image: linear-gradient(315deg, #4dccc6 0%, #96e4df 74%);
+  /* 3 */
+  &--3 {
+    background: rgb(0, 172, 238);
+    background: linear-gradient(
+      0deg,
+      rgba(0, 172, 238, 1) 0%,
+      rgba(2, 126, 251, 1) 100%
+    );
+    width: 130px;
+    height: 40px;
     line-height: 42px;
     padding: 0;
     border: none;
   }
+
+  /* 4 */
+  &--4 {
+    background-color: #4dccc6;
+    background-image: linear-gradient(315deg, #4dccc6 0%, #96e4df 74%);
+
+    line-height: 42px;
+    padding: 0;
+    border: none;
+  }
+
+  &--3 span {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
   &--4:hover {
     background-color: #89d8d3;
     background-image: linear-gradient(315deg, #89d8d3 0%, #03c8a8 74%);
@@ -60,6 +84,61 @@ button {
     width: 100%;
     height: 100%;
   }
+
+  &--3:before,
+  &--3:after {
+    position: absolute;
+    content: "";
+    right: 0;
+    top: 0;
+    background: rgba(2, 126, 251, 1);
+    transition: all 0.3s ease;
+  }
+  &--3:before {
+    height: 0%;
+    width: 2px;
+  }
+  &--3:after {
+    width: 0%;
+    height: 2px;
+  }
+  &--3:hover {
+    background: transparent;
+    box-shadow: none;
+  }
+  &--3:hover:before {
+    height: 100%;
+  }
+  &--3:hover:after {
+    width: 100%;
+  }
+  &--3 span:hover {
+    color: rgba(2, 126, 251, 1);
+  }
+  &--3 span:before,
+  &--3 span:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    background: rgba(2, 126, 251, 1);
+    transition: all 0.3s ease;
+  }
+  &--3 span:before {
+    width: 2px;
+    height: 0%;
+  }
+  &--3 span:after {
+    width: 0%;
+    height: 2px;
+  }
+  &--3 span:hover:before {
+    height: 100%;
+  }
+  &--3 span:hover:after {
+    width: 100%;
+  }
+
   &--4:before,
   &--4:after {
     position: absolute;
@@ -291,9 +370,9 @@ button {
     bottom: 0;
     background: #c797eb;
     /*box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
-                -4px -4px 6px 0 rgba(116, 125, 136, .2),
-      inset -4px -4px 6px 0 rgba(255,255,255,.5),
-      inset 4px 4px 6px 0 rgba(116, 125, 136, .3);*/
+              -4px -4px 6px 0 rgba(116, 125, 136, .2),
+    inset -4px -4px 6px 0 rgba(255,255,255,.5),
+    inset 4px 4px 6px 0 rgba(116, 125, 136, .3);*/
     transition: all 0.3s ease;
   }
 
