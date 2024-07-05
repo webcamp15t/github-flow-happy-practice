@@ -25,7 +25,7 @@ button {
   /* 7 */
   /* 8 */
   /* 9 */
-  /* 10 */
+  /* 15 */
 }
 .custom-btn--2 {
   background: rgb(96, 9, 240);
@@ -401,36 +401,33 @@ button {
   transform: scale(2) rotate(180deg);
   box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.5), -4px -4px 6px 0 rgba(116, 125, 136, 0.2), inset -4px -4px 6px 0 rgba(255, 255, 255, 0.5), inset 4px 4px 6px 0 rgba(116, 125, 136, 0.3);
 }
-.custom-btn--10 {
-  background: rgb(22, 9, 240);
-  background: linear-gradient(0deg, rgb(22, 9, 240) 0%, rgb(49, 110, 244) 100%);
-  color: #fff;
+.custom-btn--15 {
+  background: #b621fe;
   border: none;
-  transition: all 0.3s ease;
-  overflow: hidden;
+  z-index: 1;
 }
-.custom-btn--10:after {
+.custom-btn--15:after {
   position: absolute;
-  content: " ";
-  top: 0;
-  left: 0;
-  z-index: -1;
-  width: 100%;
+  content: "";
+  width: 0;
   height: 100%;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  background-color: #663dff;
+  border-radius: 5px;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), 7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
-  -webkit-transform: scale(0.1);
-  transform: scale(0.1);
 }
-.custom-btn--10:hover {
+.custom-btn--15:hover {
   color: #fff;
-  border: none;
-  background: transparent;
 }
-.custom-btn--10:hover:after {
-  background: rgb(0, 3, 255);
-  background: linear-gradient(0deg, rgb(2, 126, 251) 0%, rgb(0, 3, 255) 100%);
-  -webkit-transform: scale(1);
-  transform: scale(1);
+.custom-btn--15:hover:after {
+  left: 0;
+  width: 100%;
+}
+.custom-btn--15:active {
+  top: 2px;
 }
 
 body {
