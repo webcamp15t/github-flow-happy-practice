@@ -2,7 +2,7 @@ button {
   margin: 20px;
 }
 
-.custom-btn, .btn13 {
+.custom-btn, .btn13, .btn16 {
   width: 130px;
   height: 40px;
   color: #fff;
@@ -519,6 +519,35 @@ button {
   width: 100%;
 }
 .custom-btn--15:active {
+  top: 2px;
+}
+
+/* 16 */
+.btn16 {
+  border: none;
+  color: #000;
+}
+.btn16:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  direction: rtl;
+  z-index: -1;
+  box-shadow: -7px -7px 20px 0px rgba(255, 255, 255, 0.6), -4px -4px 5px 0px rgba(255, 255, 255, 0.6), 7px 7px 20px 0px rgba(0, 0, 0, 0.1333333333), 4px 4px 5px 0px rgba(0, 0, 0, 0.0666666667);
+  transition: all 0.3s ease;
+}
+.btn16:hover {
+  color: #000;
+}
+.btn16:hover:after {
+  left: auto;
+  right: 0;
+  width: 100%;
+}
+.btn16:active {
   top: 2px;
 }
 
